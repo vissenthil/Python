@@ -1,0 +1,50 @@
+import pandas as pd
+from pandas_profiling import ProfileReport
+import pymongo
+df = pd.read_csv('C:/Users/viss/OneDrive/Desktop/python/1.csv')
+print(df)
+head = df.head()
+print("Head of records:",head)
+taileof = df.tail(4)
+print("Tail Records:",taileof)
+columns = df.columns
+print(columns)
+print(df[['Year','Value']])
+print('Read data from HTML File from the net')
+htmldata = pd.read_html('https://www.basketball-reference.com/leagues/NBA_2015_totals.html')
+print(htmldata)
+print(type(htmldata))
+df1 = htmldata[0]
+print(type(df1))
+print(df1.head(20))
+print(df1.dtypes)
+print(df1.info)
+print('Read form Gitup:')
+df2 = pd.read_csv('https://raw.githubusercontent.com/codeforamerica/ohana-api/master/data/sample-csv/mail_addresses.csv')
+print(df2)
+print('Pandas-profiling:----')
+# profile = ProfileReport(df1, title="Pandas Profiling Report")
+#profile.to_file("C:/Users/viss/OneDrive/Desktop/python/your_report.html")
+# Day 10- OCT -2021 Class
+df3 = pd.read_csv('https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv')
+print(df3)
+print('Head of records:-')
+print(df3.head())
+print(df3.dtypes)
+print('Show only object datatype fileds')
+print(df3[df3.dtypes[df3.dtypes == 'object'].index])
+print('Show only int64 datatype fileds')
+print(df3[df3.dtypes[df3.dtypes == 'int64'].index])
+print('List both Object and int data type using or condition | symbol is or condition')
+print(df3[df3.dtypes[(df3.dtypes == 'int64' ) | (df3.dtypes == 'object') ].index ])
+print('Reading csv file from internet url:-')
+dfTitanic = pd.read_csv('https://gist.githubusercontent.com/jwalsh/ce1dc0436aba5b7a5c9666f47fa5a380/raw/5ce3854392b43ff97907112d344fc008229b0445/titanic.csv')
+print('Pandas Manipulation using Titanic csv file')
+print(dfTitanic.head())
+print('To only select the data tpe of object(strig)')
+print(dfTitanic.dtypes[dfTitanic.dtypes == 'object'])
+print('Only to display object datatpe values')
+a = dfTitanic.dtypes[dfTitanic.dtypes == 'object'].index
+print(dfTitanic[a])
+
+

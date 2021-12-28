@@ -1,0 +1,77 @@
+import numpy as np
+list1 = [1,2,3,4]
+my_array = np.array(list1)
+print(my_array)
+list2 = [10,3,5,12]
+my_list = [list1,list2]
+my_ml_array = np.array(my_list)
+print(my_ml_array)
+print(my_ml_array.shape)
+print('To know the data tpe of the array syntax:ArrayName.dtype')
+print(my_ml_array.dtype)
+print('Spcial Array syntax:np.zeros(5)')
+print(np.zeros(5))
+print('Spcial array np.ones*([5,6])')
+print(np.ones([5,7],int))
+print('An Empty array syntax:np.empty(5)')
+print(np.empty([4,3]))
+print('Identity matrix syntax:np.eye(5) will create with the shape of 5 * 5 matrix')
+print(np.eye(5))
+print('Array using arange method ')
+print(help(np.arange))
+print('Array np.arange(5)')
+print(np.arange(5))
+print('Array using arange with start 1 stop at 10 and step size of 2')
+print(np.arange(1,10,2))
+print('Using arrays and scalars ')
+arry1 = np.array([[1,2,3,4],[12,45,19,46]])
+print('Using multiplication of array')
+print(arry1 * arry1)
+print('Using substraction of array')
+print(arry1 - arry1)
+print('divide by 1/ array1 as below:')
+print(1/arry1)
+print('using power of 3 arry1 ** 3 as bleow:')
+print(arry1 ** 3)
+print('Indexing Arrays:-')
+arry2 = np.array([[1,2,3,4],[5,6,7,8]])
+print(arry2)
+print('here arry2 have 2 rows and 4 columns array arry2[row][startindex:endindex]')
+arry_slice = arry2[1][0:3]
+print(arry_slice)
+print('Changing array values syntax array[startindex:Endindex] = newvalues')
+arry_slice[:] = 100
+print(arry_slice)
+print('Copy an array syntax: newvariablename = array.copy() without any arguments')
+NewCopiedArray = arry2.copy()
+print('Copied array is:',NewCopiedArray)
+Array_2d = np.array([[1,2,3],[4,5,6],[7,8,9]])
+print(Array_2d)
+print('Array indexing index start with 0 row and 0th column below one is selecting second row in the matrix')
+print(Array_2d[1])
+print('Selecting particular index value in the 2d matrix arrayName[row][columl]')
+print(Array_2d[1][0])
+# Here [rowstart:RowEnd,ColunmStart:ColumnEnd]
+print(Array_2d[:,:])
+print('\n Select only specific row columns in the martrix arrayname[:2,1:]')
+print(Array_2d[:2,1:])
+print('Creating zeros array using np.zeros() mthod')
+Arry2d = np.zeros((10,10))
+print(Arry2d)
+Arry2d_len = len(Arry2d)
+print('Length of array is:',Arry2d_len)
+print('Shape method to know array length of idex 1 in the martrix')
+Arry2d_len = Arry2d.shape[1]
+print(Arry2d_len)
+print('Filling up array values with 1')
+for i in range(Arry2d_len):
+    Arry2d[i] = 1
+print(Arry2d)
+
+print('Filling up array values with current index in the for loop')
+for i in range(Arry2d_len):
+    Arry2d[i] = i
+print(Arry2d)
+
+print('Fancy indexing Example: Array[[2,4,6,7]]')
+print(Arry2d[[2,4,6,7]])

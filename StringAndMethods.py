@@ -49,7 +49,7 @@ print(''' Concatenation of Two or More Strings
 GetStr1 = input('Enter first string:')
 GetStr2 = input('Enter first string:')
 print('Firtst string is :',GetStr1)
-print('Firtst string is :',GetStr2)
+print('Firtst Second is :',GetStr2)
 print( 'Concatenation of two string is :', GetStr1 + GetStr2)
 print('The * operator can be used to repeat the string for a given number of times.')
 print('Example  "Hello" * 3')
@@ -102,14 +102,21 @@ print(keyword_order)
 print('**********************Python String Methods**************************************')
 print(''' 1. casefold()               11. isalnum()
           2. capitalize()             12. isalpha()
-          3. casefold()               13. isdecimal()
-          4. center()                 14. isdigit()
-          5. count()                  15. isidentifier()
+          3. isdecimal()              13. isdigit()
+          4. center()                 14. isidentifier()
+          5. count()                  
           6. title()  
           7. startswith()
           8. endswith()  
           9. find() 
           10 index()''')
+
+print( '''The casefold() method removes all case distinctions present in a string. 
+           It is used for caseless matching, i.e. ignores cases when comparing.''')
+str1 = 'SENTHIL kUMAR'
+str2 = 'senthilkumar'
+if str1.casefold() ==  str2.casefold() :
+    print('Yes str1 and str2 are equal')
 print('''str.upper() Return a copy of the string with all the cased characters converted to uppercase.''')
 a = input('Enter a lower case string to do upper case:')
 print(a.upper())

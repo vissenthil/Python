@@ -112,5 +112,22 @@ count +=1
 #new_str = asve,avse,aves ,vsae,vase,vesa
 
 
+'''
+Filter() is a built-in function in Python. 
+The filter function can be applied to an iterable such as a list or a dictionary 
+and create a new iterator. This new iterator can filter out certain specific elements 
+based on the condition that you provide very efficiently. 
+
+Note: An iterable in Python is an object that you can iterate over.
+      It is possible to loop over an iterable and return items that are in it.
+
+Python filter() with the lambda expression is the most used way to filter the elements 
+from the iterable like set, list, tuple, and dictionary.
+
+'''
+
+l1 = ["eat", "sleep", "repeat",'eat']
+dict = dict(filter(lambda x:l1.count(x[1]) > 1, enumerate(l1)))
+print(dict.keys())
 
 
